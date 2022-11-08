@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:57:42 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 12:41:05 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:37:20 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@ void	ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
-
-	/*
-	size_t	i;
-
-	i = 0;
-	while(i < n)
-		((unsigned char *)s)[i++] = 'D';*/
 }
 
 /*
