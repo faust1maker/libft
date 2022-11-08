@@ -6,13 +6,26 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:05:44 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/07 16:32:50 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:55:57 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
-{
-	if ((unsigned char) c >= 0 && (unsigned char) c <= 127)
-		return (1);
-	return (0);
+{ 
+	return (c >= 0 && c <= 127);
 }
+
+/*
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int	a;
+	int	b;
+
+	b = '\t';
+	a = ft_isascii(b);
+	printf("%d", a);
+	return (0);
+}*/

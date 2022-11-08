@@ -6,15 +6,13 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:55:33 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/07 17:01:14 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:09:50 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if ((unsigned char) c >= 32 && (unsigned char) c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126)
 }
 
 /*

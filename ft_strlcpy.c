@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 17:57:42 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 12:41:05 by fbrisson         ###   ########.fr       */
+/*   Created: 2022/11/08 12:25:32 by fbrisson          #+#    #+#             */
+/*   Updated: 2022/11/08 14:32:13 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	ft_memset(void *s, int c, size_t n);
+size_t	ft_strlen(const char *s);
 
-void	ft_bzero(void *s, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	ft_memset(s, '\0', n);
-
-	/*
 	size_t	i;
 
+	if (!(ft_strlen(src)) || !(ft_strlen(dst)))
+		return (ft_strlen(src));
+	if (!size)
+		return (ft_strlen(src));
 	i = 0;
-	while(i < n)
-		((unsigned char *)s)[i++] = 'D';*/
+	while (src[i] != '\0')
+	{
+		if (src[i] != '\0' && i < (size - 1))
+			dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 
 /*
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {
-	char	s1[] = "BABINKS";
+	char	tab1[] = "BABINKS MAH BOI";
+	char	tab2[] = "YEAH HE KNOWS ALL AROUND THIS";
 
-	ft_bzero(s1, 3);
-	printf("%s", s1);
+	ft_strlcpy(tab1, tab2, 8);
+	printf("%s", tab1);
 	return (0);
 }*/

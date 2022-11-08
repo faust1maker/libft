@@ -6,17 +6,16 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:44:50 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/07 16:32:07 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:43:17 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+
 int	ft_isalnum(int c)
 {
-	if (((unsigned char) c >= 'a' && (unsigned char) c <= 'z')
-		|| ((unsigned char) c >= 'A' && (unsigned char) c <= 'Z')
-		|| ((unsigned char) c >= '0' && (unsigned char) c <= '9'))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 /*
@@ -28,7 +27,7 @@ int	main(void)
 	int	a;
 	int	b;
 
-	b = '\t';
+	b = '8';
 	a = ft_isalnum(b);
 	printf("%d", a);
 	return (0);
