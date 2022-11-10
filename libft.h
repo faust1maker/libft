@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:24:44 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/10 14:15:44 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:43:56 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 
 char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
