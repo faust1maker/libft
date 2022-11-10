@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:12:58 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 11:33:10 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:25:48 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_toupper(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {

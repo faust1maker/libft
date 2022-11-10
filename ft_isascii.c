@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:05:44 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 17:49:43 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:26:23 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_isascii(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {

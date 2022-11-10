@@ -6,11 +6,11 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:54:44 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 17:48:36 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:26:59 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,9 +29,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 
 /*
-
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {

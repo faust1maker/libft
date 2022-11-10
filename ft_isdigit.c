@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:32:24 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 12:38:11 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:26:33 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_isdigit(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {

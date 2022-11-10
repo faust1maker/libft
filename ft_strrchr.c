@@ -6,11 +6,11 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:04:26 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 16:31:13 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:25:23 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,9 +31,6 @@ char	*ft_strrchr(const char *s, int c)
 }
 
 /*
-
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {

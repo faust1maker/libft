@@ -6,13 +6,11 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:57:42 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 14:37:20 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:25:57 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	ft_memset(void *s, int c, size_t n);
+#include <libft.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -20,9 +18,6 @@ void	ft_bzero(void *s, size_t n)
 }
 
 /*
-
-#include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {

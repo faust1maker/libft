@@ -6,30 +6,25 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:55:49 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 16:18:51 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:37:26 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <libft.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (dest < src)
-		ft_memcpy(dest, src, n);
-	else if (dest > src)
+	if (dst < src)
+		ft_memcpy(dst, src, n);
+	else if (dst > src)
 	{
 		while (n--)
-			(*(unsigned char *)(dest + n)) = (*(unsigned char *)(src + n));
+			(*(unsigned char *)(dst + n)) = (*(unsigned char *)(src + n));
 	}
-	return (dest);
+	return (dst);
 }
 
 /*
-
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {

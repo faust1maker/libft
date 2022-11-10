@@ -6,20 +6,36 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:49:33 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 17:58:58 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:33:10 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <libft.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	*alts1;
+	unsigned char	*alts2;
+	size_t			i;
 
+	alts1 = (unsigned char *)s1;
+	alts2 = (unsigned char *)s2;
+	if (!n)
+		return (0);
 	i = 0;
-	while ((s1[i] != '\0' && s2[i] != '\0') && (i < n - 1))
-	{
-		
-	}
-	return ();
+	while ((alts1[i] == alts2[i]) && (i < n))
+		i++;
+	return (alts1[i] - alts2[i]);
 }
+
+/*
+
+int	main(void)
+{
+	char	tab1[] = "BAHINKS";
+	char	tab2[] = "BABINKS";
+
+	printf("%d", ft_memcmp(tab1, tab2, 5));
+	printf("%d", memcmp(tab1, tab2, 5));
+	return (0);
+}*/

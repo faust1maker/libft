@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:34:42 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/09 11:38:17 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:25:37 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_tolower(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {

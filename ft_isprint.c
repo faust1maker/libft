@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:55:33 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 14:36:11 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:26:47 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_isprint(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {

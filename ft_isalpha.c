@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:32:38 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/08 12:08:44 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/10 08:26:15 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_isalpha(int c)
 }
 
 /*
-
-#include <stdio.h>
 
 int	main(void)
 {
