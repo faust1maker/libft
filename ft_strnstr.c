@@ -1,46 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 14:40:43 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/10 10:42:06 by fbrisson         ###   ########.fr       */
+/*   Created: 2022/11/10 09:39:28 by fbrisson          #+#    #+#             */
+/*   Updated: 2022/11/10 10:39:28 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	char	*d;
-	char	*s;
+	size_t	j;
 
-	d = (char *)dst;
-	s = (char *)src;
-	if (!d && !s)
+	if (!ft_strlen(little))
+		return ((char *)big);
+	if (!len)
 		return (NULL);
 	i = 0;
-	while (i < n)
+	while (big[i] != '\0' && i < len)
 	{
-		*d = *s;
-		d++;
-		s++;
+		j = 0;
+		while (big[i + j] == little[j])
+		{
+			if (little[j + 1] == '\0' && (i + j) < len)
+				return ((char *)big + i);
+			j++;
+		}
 		i++;
 	}
-	return (d);
+	return (NULL);
 }
 
 /*
 
 int	main(void)
 {
-	char	tab1[] = "BABINKS MAH BOI";
-	char	tab2[] = "YEAH HE KNOWS THAT STUFF";
+	char	tab1[] = "THE ONE PIECE IS THE KEY SEARCH THE ONE PIECE SEARCH LAFTEL";
+	char	tab2[] = "PIECE";
 
-	ft_memcpy(tab1, tab2, 8);
-	printf("%s", tab1);
+	printf("%s \n", ft_strnstr(tab1, tab2, 13));
+	printf("%s", strstr(tab1, tab2));
 	return (0);
 }*/

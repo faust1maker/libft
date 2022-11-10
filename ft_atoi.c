@@ -1,43 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:25:32 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/10 10:43:28 by fbrisson         ###   ########.fr       */
+/*   Created: 2022/11/10 10:48:23 by fbrisson          #+#    #+#             */
+/*   Updated: 2022/11/10 11:48:42 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
+	int	i;
+	int	res;
+	int	sign;
 
-	if (!(ft_strlen(src)) || !(ft_strlen(dst)))
-		return (ft_strlen(src));
-	if (!size)
-		return (ft_strlen(src));
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	res = 0;
+	sign = 1;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || (nptr[i] == 32))
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
 	{
-		dst[i] = src[i];
+		if (nptr[i] == 45)
+			sign *= -1;
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = ((res * 10) + (nptr[i] - 48));
+		i++;
+	}
+	return (res * sign);
 }
 
 /*
 
 int	main(void)
 {
-	char	tab1[] = "BABINKS MAH BOI";
-	char	tab2[] = "YEAH HE KNOWS ALL AROUND THIS";
+	char	tab1[] = "   	-1234'\0'56LUFFY  ";
 
-	ft_strlcpy(tab1, tab2, 8);
-	printf("%s", tab1);
+	printf("MY RESULT : %d  \n", ft_atoi(tab1));
+	printf("REAL ATOI : %d", atoi(tab1));
 	return (0);
 }*/
