@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:52:51 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/11 19:25:23 by fbrisson         ###   ########.fr       */
+/*   Created: 2022/11/11 19:29:40 by fbrisson          #+#    #+#             */
+/*   Updated: 2022/11/11 19:43:20 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*dest;
-	size_t	i;
+	size_t	size;
 
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	dest = malloc(sizeof(*dest) * (len + 1));
+	size = ft_strlen(s1) + ft_strlen(s2);
+	dest = malloc(sizeof(*dest) * (size + 1));
 	if (!dest)
 		return (NULL);
-	i = start;
-	while ((i - start) < len)
-	{
-		dest[i - start] = s[i];
-		i++;
-	}
-	dest[i - start] = '\0';
+	ft_memset(dest, '\0', size + 1);
+	ft_strlcat(dest, s1, size + 1);
+	ft_strlcat(dest, s2, size + 1);
 	return (dest);
 }
 
@@ -36,12 +33,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 int	main(void)
 {
-	char	tab1[] = "HOOD IS THE NEW TREND BABINKS IS THE WEY";
-	char	*tab2;
-	int	a = 22;
-	int	b = 7;
+	char	tab1[] = "I WANNA BE";
+	char	tab2[] = " THE GUY";
 
-	tab2 = ft_substr(tab1, a, b);
-	printf("%s \n", tab2);
+	printf("%s", ft_strjoin(tab1, tab2));
 	return (0);
+
 }*/
