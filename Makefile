@@ -6,7 +6,7 @@
 #    By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 17:49:55 by fbrisson          #+#    #+#              #
-#    Updated: 2022/11/14 12:23:18 by fbrisson         ###   ########.fr        #
+#    Updated: 2022/11/14 17:22:20 by fbrisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,3 +35,9 @@ fclean: clean
 	rm -f ${PROG}
 
 re : fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+.PHONY: all fclean re clean bonus
