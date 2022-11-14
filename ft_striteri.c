@@ -6,11 +6,21 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:37:59 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/13 17:38:41 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 10:50:10 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	
+	unsigned int	i;
+
+	i = 0;
+	if (s)
+	{
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }
