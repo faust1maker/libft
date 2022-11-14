@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:07:14 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/14 10:48:02 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:43:44 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,13 @@ char	ft_toupper_test(unsigned int i, char s)
 {
 	if (s >= 'a' && s<= 'z')
 		s -= 32;
-	}
 	return (s);
 }
 
 int	main(void)
 {
 	char	tab1[] = "babinks";
-	unsigned int 	i;
 
-	i = 0;
-	printf("%s", ft_strmapi(tab1, ft_toupper_test(, tab1)));
+	printf("%s", ft_strmapi(tab1, ft_toupper_test));
 	return (0);
 }*/

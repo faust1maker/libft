@@ -6,20 +6,20 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 14:32:37 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/13 15:35:05 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:32:44 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_sep(const char s, char c)
+static int	check_sep(const char s, char c)
 {
 	if (c == s)
 		return (1);
 	return (0);
 }
 
-int	word_count(const char *s, char c)
+static int	word_count(const char *s, char c)
 {
 	int	count;
 
@@ -36,7 +36,7 @@ int	word_count(const char *s, char c)
 	return (count);
 }
 
-int	strlen_sep(const char *s, char c)
+static int	strlen_sep(const char *s, char c)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ int	strlen_sep(const char *s, char c)
 	return (i);
 }
 
-char	*make_word(const char *s, char c)
+static char	*make_word(const char *s, char c)
 {
 	int		i;
 	int		len;
@@ -98,13 +98,13 @@ int	main(int ac, char **av)
 {
 	int	i;
 	char	**tab1;
-	char	b = 32;
+//	char	b = 32;
 
-	if (ac != 2)
+	if (ac != 3)
 		return (0);
-	tab1 = ft_split(av[1], b);
+	tab1 = ft_split(av[1], av[2][0]);
 	i = 0;
-	while (i < word_count(av[1], b))
+	while (i < word_count(av[1], av[2][0]))
 	{
 		printf("%s \n", tab1[i]);
 		free(tab1[i++]);

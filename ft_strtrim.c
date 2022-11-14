@@ -6,15 +6,13 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:45:13 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/11 20:23:26 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:35:21 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len);
-
-int	check_sep(char c, const char *set)
+static int	check_sep(char c, const char *set)
 {
 	int	i;
 

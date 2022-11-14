@@ -6,15 +6,13 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 15:47:36 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/13 17:06:20 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:30:53 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s);
-
-char	*int_fixer(int n, int i, int sign)
+static char	*int_fixer(int n, int i, int sign)
 {
 	char	*res;
 

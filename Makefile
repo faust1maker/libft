@@ -6,7 +6,7 @@
 #    By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 17:49:55 by fbrisson          #+#    #+#              #
-#    Updated: 2022/11/14 11:26:37 by fbrisson         ###   ########.fr        #
+#    Updated: 2022/11/14 12:23:18 by fbrisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ PROG = libft.a
 
 OBJ = ${SRC:.c=.o}
 
-OBJ: libft.h
-	gcc -Wall -Wextra -Werror libft.h ${SRC} -c -o $@
+.c.o:
+	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
 
 ${PROG}: ${OBJ}
 	ar rc ${PROG} ${OBJ}

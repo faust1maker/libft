@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:55:48 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/10 14:18:04 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:06:40 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*temp;
 
-	if (nmemb * size > 2147483647)
+	if (nmemb > sizeof(char) * INT_MAX || size > sizeof(char) * INT_MAX)
 		return (NULL);
 	temp = malloc(nmemb * size);
 	if (!temp)
