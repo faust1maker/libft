@@ -6,17 +6,16 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:01:51 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/13 16:25:19 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:33:56 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
 /*
 
 int	main(void)
