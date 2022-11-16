@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 14:32:37 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/14 16:32:44 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/16 09:19:36 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char	**ft_split(const char *s, char c)
 		while (*s && !check_sep(*s, c))
 			s++;
 	}
-	tab[i] = '\0';
+	tab[i] = NULL;
 	return (tab);
 }
 

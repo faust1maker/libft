@@ -6,7 +6,7 @@
 #    By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 17:49:55 by fbrisson          #+#    #+#              #
-#    Updated: 2022/11/14 17:22:20 by fbrisson         ###   ########.fr        #
+#    Updated: 2022/11/16 10:32:03 by fbrisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,14 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft
 	ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
 	ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 
+SRC_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 PROG = libft.a
 
 OBJ = ${SRC:.c=.o}
+
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 .c.o:
 	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
@@ -40,4 +45,7 @@ so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
 	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
-.PHONY: all fclean re clean bonus
+bonus:
+	ar -rc ${PROG} ${OBJ_BONUS}
+
+.PHONY: all clean fclean bonus re

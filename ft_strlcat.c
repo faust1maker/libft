@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:59:11 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/10 10:43:11 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/16 09:00:36 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	d_len;
 	size_t	max_len;
 
-	d_len = ft_strlen(dst);
-	max_len = ft_strlen(src) + d_len;
+	if (!size && !dst && !src)
+		return (0);
 	if (!size)
 		return (ft_strlen(src));
+	d_len = ft_strlen(dst);
+	max_len = ft_strlen(src) + d_len;
 	if (size < d_len)
 		return (ft_strlen(src) + size);
 	i = 0;

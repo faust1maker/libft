@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:52:51 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/14 18:10:24 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/16 08:33:02 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	size_t		i;
+	size_t	i;
 	char	*dest;
 
 	if (!s)

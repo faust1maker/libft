@@ -1,46 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 14:40:43 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/16 08:51:47 by fbrisson         ###   ########.fr       */
+/*   Created: 2022/11/16 11:35:06 by fbrisson          #+#    #+#             */
+/*   Updated: 2022/11/16 11:51:04 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	char	*d;
-	char	*s;
+	int	size;
 
-	if (!dst && !src)
-		return (NULL);
-	d = (char *)dst;
-	s = (char *)src;
-	i = 0;
-	while (i < n)
+	if (!lst)
+		return (0);
+	size = 1;
+	while (lst->next != NULL)
 	{
-		*d = *s;
-		d++;
-		s++;
-		i++;
+		lst = lst->next;
+		size++;
 	}
-	return (dst);
+	return (size);
 }
-
-/*
-
-int	main(void)
-{
-	char	tab1[] = "BABINKS MAH BOI";
-	char	tab2[] = "YEAH HE KNOWS THAT STUFF";
-
-	ft_memcpy(tab1, tab2, 8);
-	printf("%s", tab1);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:45:13 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/14 16:35:21 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/16 09:09:29 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,22 @@ static int	check_sep(char c, const char *set)
 
 char	*ft_strtrim(const char *s, const char *set)
 {
-	size_t	start;
-	size_t	len;
-	char	*dest;
+	unsigned int	start;
+	char			*dest;
+	size_t			len;
 
 	if (!s || !set)
 		return (NULL);
 	start = 0;
-	while (check_sep(s[start], set) && s[start] != '\0')
+	while (s[start] != '\0' && check_sep(s[start], set))
 		start++;
 	len = ft_strlen(s) - 1;
 	if (start == len + 1)
-		return (NULL);
+	{
+		dest = malloc(1);
+		dest[0] = '\0';
+		return (dest);
+	}
 	while (check_sep(s[len], set))
 		len--;
 	len = len - start + 1;
