@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 09:37:37 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/16 10:47:14 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/17 09:47:25 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,15 @@ t_list	*ft_lstnew(void *content)
 	new_list->next = NULL;
 	return (new_list);
 }
+
+/*
+
+int	main(void)
+{
+	char	tab[] = "BABINKS";
+	t_list	*list1;
+
+	list1 = ft_lstnew(tab);
+	printf("%s", (char *)list1->content);
+	return (0);
+}*/
