@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:51:38 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/17 12:14:07 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:43:56 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,4 @@ int	main(void)
 	printf("%s \n", (char *)list1->next->content);
 	printf("%s", (char *)list1->next->next->content);
 	return (0);
-
 }*/
