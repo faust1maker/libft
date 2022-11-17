@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:35:06 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/17 11:08:21 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:16:49 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
+	int	count;
 
-	if (!lst)
-		return (0);
-	size = 1;
-	while (lst->next != NULL)
+	//if (!lst)
+	//	return (0);
+	count = 0;
+	while (lst != NULL)
 	{
 		lst = lst->next;
-		size++;
+		count++;
 	}
-	return (size);
+	return (count);
 }
 
 /*

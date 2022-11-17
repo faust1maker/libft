@@ -6,7 +6,7 @@
 #    By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 17:49:55 by fbrisson          #+#    #+#              #
-#    Updated: 2022/11/17 09:00:04 by fbrisson         ###   ########.fr        #
+#    Updated: 2022/11/17 13:00:33 by fbrisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_ba
 
 OBJ = ${SRC:.c=.o}
 
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
+BONUS_OBJ = ${BONUS_SRC:.c=.o}
 
 .c.o:
 	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
@@ -31,13 +31,13 @@ BONUS_OBJ = $(BONUS_SRC:.c=.o)
 ${PROG}: ${OBJ}
 	ar -rcs ${PROG} ${OBJ}
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar -rcs ${PROG} ${OBJ_BONUS}
+bonus: ${OBJ} ${BONUS_OBJ}
+	ar -rcs ${PROG} ${BONUS_OBJ} ${OBJ}
 
 all: ${PROG}
 
 clean:
-	rm -f ${OBJ} $(BONUS_OBJ)
+	rm -f ${OBJ} ${BONUS_OBJ}
 
 fclean: clean
 	rm -f ${PROG}
@@ -45,7 +45,7 @@ fclean: clean
 re : fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	${CC} -nostartfiles -fPIC ${CFLAGS} ${SRC}
+	gcc -nostartfiles -shared -o libft.so ${OBJ}
 
 .PHONY: all clean fclean bonus re
