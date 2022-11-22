@@ -6,18 +6,11 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 14:32:37 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/16 09:19:36 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:06:20 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	check_sep(const char s, char c)
-{
-	if (c == s)
-		return (1);
-	return (0);
-}
 
 static int	word_count(const char *s, char c)
 {
@@ -26,11 +19,11 @@ static int	word_count(const char *s, char c)
 	count = 0;
 	while (*s)
 	{
-		while (*s && check_sep(*s, c))
+		while (*s && *s == c)
 			s++;
 		if (*s)
 			count++;
-		while (*s && !check_sep(*s, c))
+		while (*s && *s != c)
 			s++;
 	}
 	return (count);
@@ -41,7 +34,7 @@ static int	strlen_sep(const char *s, char c)
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0' && !check_sep(s[i], c))
+	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i);
 }
@@ -57,10 +50,23 @@ static char	*make_word(const char *s, char c)
 	if (!word)
 		return (NULL);
 	i = 0;
-	while (*s && !check_sep(*s, c))
+	while (*s && *s != c)
 		word[i++] = *(s++);
 	word[i] = '\0';
 	return (word);
+}
+
+static void	martin_luther_king(char **split, unsigned int nb)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (i < nb)
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
 
 char	**ft_split(const char *s, char c)
@@ -74,18 +80,18 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	while (*s)
 	{
-		while (*s && check_sep(*s, c))
+		while (*s && *s == c)
 			s++;
 		if (*s)
 		{
 			tab[i] = make_word(s, c);
 			if (!tab[i++])
 			{
-				free(tab[i]);
+				martin_luther_king(tab, i);
 				return (NULL);
 			}
 		}
-		while (*s && !check_sep(*s, c))
+		while (*s && *s != c)
 			s++;
 	}
 	tab[i] = NULL;

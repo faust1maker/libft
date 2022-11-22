@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 12:48:57 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/17 17:04:58 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:25:44 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*wagon;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	new_list = NULL;
 	while (lst)

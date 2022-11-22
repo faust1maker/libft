@@ -6,11 +6,11 @@
 #    By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 17:49:55 by fbrisson          #+#    #+#              #
-#    Updated: 2022/11/17 13:00:33 by fbrisson         ###   ########.fr        #
+#    Updated: 2022/11/22 09:43:10 by fbrisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROG = libft.a
+NAME = libft.a
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c \
@@ -26,21 +26,21 @@ OBJ = ${SRC:.c=.o}
 BONUS_OBJ = ${BONUS_SRC:.c=.o}
 
 .c.o:
-	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
+	cc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
 
-${PROG}: ${OBJ}
-	ar -rcs ${PROG} ${OBJ}
+${NAME}: ${OBJ}
+	ar -rcs ${NAME} ${OBJ}
 
 bonus: ${OBJ} ${BONUS_OBJ}
-	ar -rcs ${PROG} ${BONUS_OBJ} ${OBJ}
+	ar -rcs ${NAME} ${BONUS_OBJ} ${OBJ}
 
-all: ${PROG}
+all: ${NAME}
 
 clean:
 	rm -f ${OBJ} ${BONUS_OBJ}
 
 fclean: clean
-	rm -f ${PROG}
+	rm -f ${NAME}
 
 re : fclean all
 

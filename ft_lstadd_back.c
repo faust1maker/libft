@@ -6,7 +6,7 @@
 /*   By: fbrisson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:24:25 by fbrisson          #+#    #+#             */
-/*   Updated: 2022/11/17 12:34:21 by fbrisson         ###   ########.fr       */
+/*   Updated: 2022/11/22 10:48:01 by fbrisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if(lst)
+	if (lst)
 	{
 		if (*lst == NULL)
 			*lst = new;
